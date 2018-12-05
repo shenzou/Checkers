@@ -1,0 +1,275 @@
+﻿<Window x:Class="Checkers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Checkers"
+        mc:Ignorable="d"
+        Title="Checkers" Height="470" Width="470">
+ 
+    <Grid x:Name="plateau" Background="#FFCD9214" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="A1" Grid.Row="0" Background="{x:Null}" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="A2" Grid.Column="1" Background="#FFE4D698"></Button>
+        <Button x:Name="A3" Grid.Column="2" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="A4" Grid.Column="3" Background="#FFE4D698"></Button>
+        <Button x:Name="A5" Grid.Column="4" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="A6" Grid.Column="5" Background="#FFE4D698"></Button>
+        <Button x:Name="A7" Grid.Column="6" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="A8" Grid.Column="7" Background="#FFE4D698"></Button>
+        <Button x:Name="B1" Grid.Row="1" Background="#FFE4D698"></Button>
+        <Button x:Name="B2" Grid.Column="1" Grid.Row="1" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="B3" Grid.Column="2" Grid.Row="1" Background="#FFE4D698"></Button>
+        <Button x:Name="B4" Grid.Column="3" Grid.Row="1" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="B5" Grid.Column="4" Grid.Row="1" Background="#FFE4D698"></Button>
+        <Button x:Name="B6" Grid.Column="5" Grid.Row="1" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="B7" Grid.Column="6" Grid.Row="1" Background="#FFE4D698"></Button>
+        <Button x:Name="B8" Grid.Column="7" Grid.Row="1" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="C1" Grid.Row="2" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="C2" Grid.Column="1" Grid.Row="2" Background="#FFE4D698"></Button>
+        <Button x:Name="C3" Grid.Column="2" Grid.Row="2" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="C4" Grid.Column="3" Grid.Row="2" Background="#FFE4D698"></Button>
+        <Button x:Name="C5" Grid.Column="4" Grid.Row="2" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="C6" Grid.Column="5" Grid.Row="2" Background="#FFE4D698"></Button>
+        <Button x:Name="C7" Grid.Column="6" Grid.Row="2" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/black.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="C8" Grid.Column="7" Grid.Row="2" Background="#FFE4D698">
+            <StackPanel x:Name="stackC8" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="D1" Grid.Row="3" Background="#FFE4D698">
+            <StackPanel x:Name="stackD1" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="D2" Grid.Column="1" Grid.Row="3" Background="{x:Null}"></Button>
+        
+        <Button x:Name="D3" Grid.Column="2" Grid.Row="3" Background="#FFE4D698">
+            <StackPanel x:Name="stackD3" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="D4" Grid.Column="3" Grid.Row="3" Background="{x:Null}"></Button>
+        
+        <Button x:Name="D5" Grid.Column="4" Grid.Row="3" Background="#FFE4D698">
+            <StackPanel x:Name="stackD5" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="D6" Grid.Column="5" Grid.Row="3" Background="{x:Null}"></Button>
+        
+        <Button x:Name="D7" Grid.Column="6" Grid.Row="3" Background="#FFE4D698">
+            <StackPanel x:Name="stackD7" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="D8" Grid.Column="7" Grid.Row="3" Background="{x:Null}"></Button>
+        
+        <Button x:Name="E1" Grid.Row="4" Background="{x:Null}"></Button>
+        
+        <Button x:Name="E2" Grid.Column="1" Grid.Row="4" Background="#FFE4D698">
+            <StackPanel x:Name="stackE2" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="E3" Grid.Column="2" Grid.Row="4" Background="{x:Null}"></Button>
+        
+        <Button x:Name="E4" Grid.Column="3" Grid.Row="4" Background="#FFE4D698">
+            <StackPanel x:Name="stackE4" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="E5" Grid.Column="4" Grid.Row="4" Background="{x:Null}"></Button>
+        
+        <Button x:Name="E6" Grid.Column="5" Grid.Row="4" Background="#FFE4D698">
+            <StackPanel x:Name="stackE6" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="E7" Grid.Column="6" Grid.Row="4" Background="{x:Null}"></Button>
+        
+        <Button x:Name="E8" Grid.Column="7" Grid.Row="4" Background="#FFE4D698">
+            <StackPanel x:Name="stackE8" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="F1" Grid.Row="5" Background="#FFE4D698">
+            <StackPanel x:Name="stackF1" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="F2" Grid.Column="1" Grid.Row="5" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="F3" Grid.Column="2" Grid.Row="5" Background="#FFE4D698">
+            <StackPanel x:Name="stackF3" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="F4" Grid.Column="3" Grid.Row="5" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="F5" Grid.Column="4" Grid.Row="5" Background="#FFE4D698">
+            <StackPanel x:Name="stackF5" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="F6" Grid.Column="5" Grid.Row="5" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="F7" Grid.Column="6" Grid.Row="5" Background="#FFE4D698">
+            <StackPanel x:Name="stackF7" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="F8" Grid.Column="7" Grid.Row="5" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="G1" Grid.Row="6" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="G2" Grid.Column="1" Grid.Row="6" Background="#FFE4D698">
+            <StackPanel x:Name="stackG2" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="G3" Grid.Column="2" Grid.Row="6" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="G4" Grid.Column="3" Grid.Row="6" Background="#FFE4D698">
+            <StackPanel x:Name="stackG4" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="G5" Grid.Column="4" Grid.Row="6" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="G6" Grid.Column="5" Grid.Row="6" Background="#FFE4D698">
+            <StackPanel x:Name="stackG6" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="G7" Grid.Column="6" Grid.Row="6" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="G8" Grid.Column="7" Grid.Row="6" Background="#FFE4D698">
+            <StackPanel x:Name="stackG8" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="H1" Grid.Row="7" Background="#FFE4D698">
+            <StackPanel x:Name="stackH1" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="H2" Grid.Column="1" Grid.Row="7" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="H3" Grid.Column="2" Grid.Row="7" Background="#FFE4D698">
+            <StackPanel x:Name="stackH3" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="H4" Grid.Column="3" Grid.Row="7" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="H5" Grid.Column="4" Grid.Row="7" Background="#FFE4D698">
+            <StackPanel x:Name="stackH5" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="H6" Grid.Column="5" Grid.Row="7" Background="{x:Null}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="H7" Grid.Column="6" Grid.Row="7" Background="#FFE4D698">
+            <StackPanel x:Name="stackH7" Orientation="Horizontal"></StackPanel>
+        </Button>
+        
+        <Button x:Name="H8" Grid.Column="7" Grid.Row="7" Background="{x:Null}">
+            <StackPanel x:Name="stackH8" Orientation="Horizontal">
+                <Image Source="images/white.png" Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
